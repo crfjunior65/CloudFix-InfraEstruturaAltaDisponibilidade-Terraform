@@ -1,0 +1,4 @@
+# Ignore all private keys
+*.pem
+*.key
+!.gitignore

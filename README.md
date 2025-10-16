@@ -29,7 +29,7 @@ graph TD
     subgraph "AWS Cloud"
         subgraph "Networking (VPC)"
             ALB[Application Load Balancer]
-            
+
             subgraph "Serviços Principais"
                 ECS[ECS Fargate/EC2]
                 ECR[ECR - Registro de Imagem]

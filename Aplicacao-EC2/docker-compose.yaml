@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  dolfy-app:
+    image: 046394856713.dkr.ecr.us-east-1.amazonaws.com/dolfy-hml:latest
+    container_name: dolfy-application
+    restart: unless-stopped
+    ports:
+      - "80:3000"
+    environment:
+      - NODE_ENV=production
+
+      # RDS PostgreSQL
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+
+      # Valkey (Redis AWS)
+      - REDIS_HOST=${REDIS_HOST}
+      - REDIS_PORT=${REDIS_PORT}
+
+      # AWS
+      - AWS_REGION=us-east-1
+
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: dolfy-app
+        awslogs-region: us-east-1
+        awslogs-stream-prefix: ec2
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

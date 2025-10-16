@@ -1,0 +1,89 @@
+openapi: 3.0.0
+info:
+  title: API Example
+  description: Exemplo de API com Swagger
+  version: 1.0.0
+  contact:
+    name: Suporte API
+    email: suporte@example.com
+
+servers:
+  - url: http://localhost:3000
+    description: Servidor de desenvolvimento
+
+paths:
+  /api/health:
+    get:
+      summary: Health Check
+      description: Verifica o status da API
+      responses:
+        '200':
+          description: API está funcionando
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  timestamp:
+                    type: string
+                    format: date-time
+
+  /api/users:
+    get:
+      summary: Listar usuários
+      description: Retorna a lista de usuários
+      responses:
+        '200':
+          description: Lista de usuários
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    email:
+                      type: string
+                      format: email
+
+    post:
+      summary: Criar usuário
+      description: Cria um novo usuário
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+                - email
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                  format: email
+      responses:
+        '201':
+          description: Usuário criado com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  email:
+                    type: string
+                  created:
+                    type: string
+                    format: date-time
