@@ -2,8 +2,8 @@ version: '3.8'
 
 services:
   aplicacao-principal:
-    image: ${ECR_REGISTRY}/dolfy-hml:${IMAGE_TAG:-latest}
-    container_name: dolfy-application
+    image: ${ECR_REGISTRY}/CloudFix-hml:${IMAGE_TAG:-latest}
+    container_name: CloudFix-application
     restart: unless-stopped
     ports:
       - "${APP_PORT:-3000}:3000"

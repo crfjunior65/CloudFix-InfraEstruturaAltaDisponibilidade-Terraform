@@ -12,9 +12,9 @@ app.use(express.urlencoded({ extended: true }));
 const dbConfig = {
   host: process.env.DB_HOST?.split(':')[0], // Remove porta se presente
   port: process.env.DB_PORT || 5432,
-  database: process.env.DB_NAME || 'dolfy',
-  user: process.env.DB_USER || 'dolfy',
-  password: process.env.DB_PASSWORD || 'dolfy_password',
+  database: process.env.DB_NAME || 'CloudFix',
+  user: process.env.DB_USER || 'CloudFix',
+  password: process.env.DB_PASSWORD || 'CloudFix_password',
   ssl: process.env.NODE_ENV === 'production'
 };
 
@@ -35,7 +35,7 @@ app.get('/health', async (req, res) => {
   const healthCheck = {
     status: 'OK',
     timestamp: new Date().toISOString(),
-    service: 'Dolfy API',
+    service: 'CloudFix API',
     version: '1.0.0',
     checks: {}
   };
@@ -84,7 +84,7 @@ app.get('/health', async (req, res) => {
 // Endpoint principal
 app.get('/api', (req, res) => {
   res.json({
-    message: '🚀 Dolfy API está funcionando!',
+    message: '🚀 CloudFix API está funcionando!',
     environment: process.env.NODE_ENV || 'development',
     region: process.env.AWS_REGION || 'us-east-1',
     endpoints: {
@@ -158,7 +158,7 @@ app.get('/api/cache/:key', async (req, res) => {
 
 // Inicialização segura
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🎯 Dolfy API rodando na porta ${PORT}`);
+  console.log(`🎯 CloudFix API rodando na porta ${PORT}`);
   console.log(`🏥 Health Check: http://localhost:${PORT}/health`);
   console.log(`📚 API Docs: http://localhost:${PORT}/api`);
   console.log(`🗄️  Database: ${dbConfig.host}`);

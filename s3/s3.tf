@@ -30,7 +30,7 @@ variable "regionProject" {
 
 variable "projectName" {
   description = "Nome do projeto -Sera usado para criar o nome da task, service, roles e container-"
-  default     = "dolfy-shield-tfstate"
+  default     = "CloudFix-tfstate"
 }
 
 variable "tags" {
@@ -38,7 +38,7 @@ variable "tags" {
   type        = map(string)
   default = {
     Environment = "homologation"
-    Projeto     = "dolfy"
+    Projeto     = "CloudFix"
     ManagedBy   = "terraform"
     Owner       = "devops-team"
   }

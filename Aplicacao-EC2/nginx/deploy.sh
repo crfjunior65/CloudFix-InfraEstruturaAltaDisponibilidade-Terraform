@@ -7,7 +7,7 @@ chmod +x ecr-login.sh
 
 # Baixar imagem mais recente
 echo "Baixando imagem mais recente..."
-docker pull 046394856713.dkr.ecr.us-east-1.amazonaws.com/dolfy-hml:latest
+docker pull 046394856713.dkr.ecr.us-east-1.amazonaws.com/CloudFix-hml:latest
 
 # Parar container atual se existir
 echo "Parando container atual..."

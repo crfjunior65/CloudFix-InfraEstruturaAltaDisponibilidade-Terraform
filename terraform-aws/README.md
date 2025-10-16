@@ -1,6 +1,6 @@
-# Infraestrutura como Código para Plataforma Dolfy na AWS
+# Infraestrutura como Código para Plataforma CloudFix na AWS
 
-Este projeto contém a definição da infraestrutura como código (IaC) para a implantação da plataforma Dolfy na AWS, utilizando Terraform. A arquitetura é projetada para ser modular, flexível e escalável, seguindo as melhores práticas de DevOps e nuvem.
+Este projeto contém a definição da infraestrutura como código (IaC) para a implantação da plataforma CloudFix na AWS, utilizando Terraform. A arquitetura é projetada para ser modular, flexível e escalável, seguindo as melhores práticas de DevOps e nuvem.
 
 ## ✨ Principais Funcionalidades
 
@@ -54,7 +54,7 @@ terraform-aws/
 1.  **Clonar o Repositório**
     ```bash
     git clone <url-do-repositorio>
-    cd Dolfy/terraform-aws
+    cd CloudFix/terraform-aws
     ```
 
 2.  **Configurar as Variáveis do Ambiente**

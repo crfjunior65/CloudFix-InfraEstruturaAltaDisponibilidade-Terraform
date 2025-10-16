@@ -202,6 +202,6 @@ variable "tags" {
     Environment = "homologation"
     ManagedBy   = "terraform"
     Owner       = "devops-team"
-    Projeto     = "dolfy"
+    Projeto     = "CloudFix"
   }
 }

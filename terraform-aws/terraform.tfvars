@@ -6,8 +6,8 @@ enable_ec2 = true
 enable_ecs = false
 
 # Project Configuration
-project_name = "dolfy"
-prefix       = "dolfy"
+project_name = "CloudFix"
+prefix       = "CloudFix"
 environment  = "hml"
 
 # EC2 Configuration
@@ -29,9 +29,9 @@ num_azs  = 2
 # RDS Configuration
 rds_instance_class = "db.t3.micro"
 rds_storage        = 50
-db_name            = "dolfy"
-db_username        = "dolfy"
-db_password        = "dolfy_password"
+db_name            = "CloudFix"
+db_username        = "CloudFix"
+db_password        = "CloudFix_password"
 
 # Valkey Configuration
 valkey_engine_version = "8.0"
@@ -49,7 +49,7 @@ aws_eip_public_ip = "3.220.103.33"
 monitoring_sns_topic_arn = ""
 monitored_services = [
   {
-    name          = "dolfy-app"
+    name          = "CloudFix-app"
     namespace     = "default"
     min_pod_count = 2
     cpu_threshold = 80
@@ -63,7 +63,7 @@ deploy_test_app = true
 # Tags Configuration
 tags = {
   Environment = "homologation"
-  Projeto     = "dolfy"
+  Projeto     = "CloudFix"
   ManagedBy   = "terraform"
   Owner       = "devops-team"
 }

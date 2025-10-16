@@ -1,7 +1,7 @@
 {
-  "name": "dolfy-app",
+  "name": "CloudFix-app",
   "version": "1.0.0",
-  "description": "Aplicação Dolfy com PostgreSQL e Redis",
+  "description": "Aplicação CloudFix com PostgreSQL e Redis",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

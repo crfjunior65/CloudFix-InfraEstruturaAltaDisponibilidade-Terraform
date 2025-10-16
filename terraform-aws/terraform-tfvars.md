@@ -1,5 +1,5 @@
 # =============================================================================
-# Exemplo de Variáveis do Terraform para a Plataforma Dolfy
+# Exemplo de Variáveis do Terraform para a Plataforma CloudFix
 #
 # Copie este arquivo para "terraform.tfvars" e preencha com os valores desejados.
 # `terraform.tfvars` NÃO deve ser versionado no Git.
@@ -16,11 +16,11 @@ aws_region = "us-east-1"
 environment = "dev"
 
 # Nome do projeto. Usado como prefixo para vários recursos.
-project_name = "dolfy"
+project_name = "CloudFix"
 
 # Tags comuns a serem aplicadas em todos os recursos que suportam tagging.
 common_tags = {
-  Project     = "Dolfy Platform"
+  Project     = "CloudFix Platform"
   ManagedBy   = "Terraform"
   Environment = "development"
 }
@@ -64,7 +64,7 @@ ecs_desired_count = 1    # Número de instâncias da tarefa que devem estar roda
 rds_instance_class    = "db.t3.micro"
 rds_allocated_storage = 20
 rds_engine_version    = "14.6"
-rds_db_name           = "dolfydb"
+rds_db_name           = "CloudFixdb"
 rds_db_username       = "admin"
 
 # ATENÇÃO: Para a senha, é altamente recomendável usar um cofre de segredos

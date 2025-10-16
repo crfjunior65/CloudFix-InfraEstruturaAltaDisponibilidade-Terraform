@@ -1,4 +1,4 @@
-# Plataforma Dolfy - Infraestrutura AWS com Terraform
+# Plataforma CloudFix - Infraestrutura AWS com Terraform
 
 ![Terraform](https://img.shields.io/badge/Terraform-%237B42BC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -8,7 +8,7 @@
 
 ## ❯ Visão Geral
 
-Este projeto implementa uma infraestrutura completa e escalável na **AWS** para hospedar a **Plataforma Dolfy**, uma aplicação de apostas em contêineres. A infraestrutura é totalmente gerenciada como código utilizando **Terraform**, seguindo uma abordagem modular e reutilizável.
+Este projeto implementa uma infraestrutura completa e escalável na **AWS** para hospedar a **Plataforma CloudFix**, uma aplicação de apostas em contêineres. A infraestrutura é totalmente gerenciada como código utilizando **Terraform**, seguindo uma abordagem modular e reutilizável.
 
 A arquitetura foi projetada para ser flexível, suportando a implantação da aplicação em duas estratégias de computação distintas:
 1.  **Amazon ECS (Elastic Container Service) com Fargate:** Uma abordagem serverless para orquestração de contêineres, ideal para escalabilidade e simplicidade operacional.
@@ -126,7 +126,7 @@ Antes de começar, garanta que você tenha as seguintes ferramentas instaladas e
 1.  **Clonar o Repositório:**
     ```bash
     git clone <URL_DO_SEU_REPOSITORIO>
-    cd Dolfy
+    cd CloudFix
     ```
 
 2.  **Construir e Enviar as Imagens Docker:**

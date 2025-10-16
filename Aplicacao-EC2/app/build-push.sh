@@ -2,7 +2,7 @@
 
 # Configurações
 ECR_REGISTRY="046394856713.dkr.ecr.us-east-1.amazonaws.com"
-IMAGE_NAME="dolfy-hml"
+IMAGE_NAME="CloudFix-hml"
 TAG="latest"
 
 echo "🔨 Construindo imagem Docker..."

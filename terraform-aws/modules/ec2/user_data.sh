@@ -104,14 +104,14 @@ sudo usermod -a -G docker ec2-user
 docker-compose down
 
 # Pull da imagem mais recente
-docker pull 046394856713.dkr.ecr.us-east-1.amazonaws.com/dolfy-hml:latest
+docker pull 046394856713.dkr.ecr.us-east-1.amazonaws.com/CloudFix-hml:latest
 
 # Iniciar aplicação
 docker-compose up -d
 
 echo "✅ Deploy concluído!"
 echo "📊 Verificar status: docker-compose ps"
-echo "📝 Ver logs: docker-compose logs -f dolfy-app"
+echo "📝 Ver logs: docker-compose logs -f CloudFix-app"
 echo "🌐 Acesse: http://localhost/health"
 EOF
 

@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  dolfy-app:
-    image: 046394856713.dkr.ecr.us-east-1.amazonaws.com/dolfy-hml:latest
-    container_name: dolfy-application
+  CloudFix-app:
+    image: 046394856713.dkr.ecr.us-east-1.amazonaws.com/CloudFix-hml:latest
+    container_name: CloudFix-application
     restart: unless-stopped
     ports:
       - "80:3000"
@@ -27,7 +27,7 @@ services:
     logging:
       driver: awslogs
       options:
-        awslogs-group: dolfy-app
+        awslogs-group: CloudFix-app
         awslogs-region: us-east-1
         awslogs-stream-prefix: ec2
 

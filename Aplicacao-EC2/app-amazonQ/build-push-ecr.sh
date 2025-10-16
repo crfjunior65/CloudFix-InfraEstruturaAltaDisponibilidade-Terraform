@@ -2,7 +2,7 @@
 
 # Configurações
 AWS_REGION="us-east-1"
-ECR_REPOSITORY="dolfy-hml"
+ECR_REPOSITORY="CloudFix-hml"
 IMAGE_TAG="latest"
 
 # Pega o account ID da AWS
